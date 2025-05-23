@@ -11,6 +11,10 @@ StyleAR is a framework that enables the multimodal autoregressive model to perfo
 <img src='assets/teaser.png' width = 800 >
 </div>
 
+## Release
+- [2024/04/03] 🔥 We release the infernce code and checkpoints.
+- [2024/04/03] 🔥 We release the [technical report](https://arxiv.org/abs/2404.02733).
+
 ## Demos
 
 ### Comparison with Previous Works
