@@ -5,6 +5,8 @@
 
 </div>
 
+StyleAR is a framework that enables the multimodal autoregressive model to perform style-aligned text-to-image generation.
+
 <div align="center">
-<img src='assets/teaser.png' width = 900 >
+<img src='assets/teaser.png' width = 700 >
 </div>
