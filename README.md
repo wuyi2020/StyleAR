@@ -3,3 +3,8 @@
 
 **Yi Wu** · **Lingting Zhu** · **Shengju Qian** · **Lei Liu** · **Wandi Qiao** · **Lequan Yu** · **Bin Li**
 
+</div>
+
+<div align="center">
+<img src='assets/teaser.png' width = 900 >
+</div>
