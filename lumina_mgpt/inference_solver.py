@@ -294,7 +294,6 @@ class FlexARInferenceSolver:
             device_map="cuda",
         )
 
-
         self.image_proj = Resampler(
             dim=4096,
             depth=4,
@@ -305,7 +304,6 @@ class FlexARInferenceSolver:
             output_dim=4096,
             ff_mult=4,
         ).cuda()
-
 
 
         self.clip_image_encoder = CLIPVisionModelWithProjection.from_pretrained("laion/CLIP-ViT-H-14-laion2B-s32B-b79K").cuda()
@@ -366,13 +364,19 @@ class FlexARInferenceSolver:
     def generate(
         self,
         images: Image.Image | str | List[Union[Image.Image, str]],
-        qas,
+        test_prompt,
         clip_image,
+        noise_strength,
         max_gen_len,
         temperature,
         logits_processor=None,
         streamer=None,
     ):
+
+        special_tokens = "S* " * 15 + "S*"
+        q1 = f"Instant style Generation. Given image style is {special_tokens}. Please generate an same style image according to my instruction: "
+        qas = [[q1 + test_prompt, None]]
+
 
         conversations = []
         for q, a in qas:
@@ -412,14 +416,14 @@ class FlexARInferenceSolver:
             image_embeds = self.clip_image_encoder(**inputs, output_hidden_states=True).hidden_states[-2]
 
 
-        # image_embeds[1:2] = image_embeds[0:1, :, :] - 0.8 * image_embeds[1:2, :, :]
+        if image_embeds.shape[0] == 2:
+            image_embeds[1:2] = image_embeds[0:1, :, :] - 0.8 * image_embeds[1:2, :, :]
+            input_embeds = self.image_proj(image_embeds)
+            input_embeds = 0.2 * input_embeds[0:1, :, :] + 0.8 * input_embeds[1:2, :, :]
+        else:
+            input_embeds = self.image_proj(image_embeds)
 
-
-        input_embeds = self.image_proj(image_embeds)
-
-        # input_embeds = 0.5 * input_embeds[0:1, :, :] + 0.5 * input_embeds[1:2, :, :]
-
-        input_embeds = input_embeds + torch.randn_like(input_embeds).to("cuda") * 0.1
+        input_embeds = input_embeds + torch.randn_like(input_embeds).to("cuda") * noise_strength
 
 
         self.model.set_input_tokens_and_embeds([index_list], input_embeds)
@@ -525,3 +529,4 @@ if __name__ == "__main__":
     parser = FlexARInferenceSolver.get_args_parser()
     args = parser.parse_args()
     solver = FlexARInferenceSolver(**vars(args))
+
