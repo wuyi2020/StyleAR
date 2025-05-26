@@ -72,7 +72,7 @@ StyleAR
 
 ## 💫 Inference
 ```
-python inference.py --params_path "{params_path}" --style "{reference_style_image}" --prompt "{prompt}" --save_path "{save_path}"
+python inference.py --params_path "{stylear_params_path}" --style "{reference_style_image}" --prompt "{prompt}" --save_path "{save_path}"
 ```
 
 ## 🔆 Demos
