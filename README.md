@@ -94,3 +94,21 @@ python inference.py --params_path "{stylear_params_path}" --style "{reference_st
 <p align="center">
   <img src="assets/seg.png">
 </p>
+
+## Citation
+
+If you find our work useful, please kindly cite as:
+```
+@article{wu2025stylear,
+  title={StyleAR: Customizing Multimodal Autoregressive Model for Style-Aligned Text-to-Image Generation},
+  author={Wu, Yi and Zhu, Lingting and Qian, Shengju and Liu, Lei and Qiao, Wandi and Yu, Lequan and Li, Bin},
+  journal={arXiv preprint arXiv:2505.xxxxx},
+  year={2025}
+}
+
+```
+
+## Related Links
+If you are interested in **Personalized Image Generation with AR Models**, we would also like to recommend you to check out our related work:
+
+* [Proxy-Tuning: Tailoring Multimodal Autoregressive Models for Subject-Driven Image Generation](https://arxiv.org/abs/2503.10125).
