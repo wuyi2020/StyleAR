@@ -67,6 +67,19 @@ StyleAR
 - ...
 ```
 
+Then download the stylear models from [Hugging Face](https://huggingface.co/Ani2017/StyleAR) and put them to 'stylear_models' directory:
+
+```
+StyleAR
+- lumina_mgpt/
+    - ckpts/
+    - stylear_models/
+        - image_proj.pth
+        - model.safetensors
+- xllmx/
+- ...
+```
+
 ## 💫 Inference
 ```
 python inference.py --params_path "{stylear_params_path}" --style "{reference_style_image}" --prompt "{prompt}" --save_path "{save_path}"
