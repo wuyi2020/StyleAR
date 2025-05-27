@@ -11,9 +11,9 @@ StyleAR is a framework that enables the multimodal autoregressive model to perfo
 <img src='assets/teaser.png' width = 875 >
 </div>
 
-## 📝 Release
-- [2025/05/27] 🔥 We release the infernce code and checkpoints.
-- [2025/05/27] 🔥 We release the [technical report](https://arxiv.org/abs/2505.19874).
+## 🔥 Release
+- [2025/05/27] 🎉 We release the infernce code and checkpoints.
+- [2025/05/27] 🎉 We release the [technical report](https://arxiv.org/abs/2505.19874).
 
 ## 🧰 Models
 |Base Model| Task Type | Resolution | Checkpoint |
@@ -104,6 +104,14 @@ python inference.py --params_path "{stylear_params_path}" --style "{reference_st
 <p align="center">
   <img src="assets/seg.png">
 </p>
+
+
+## 📝 To-Do List
+ - [x] Style-driven Text-to-Image Generation Inference Code & Checkpoints
+ - [x] Technical Report
+ - [ ] StyleAR Integration With Depth Control Inference Code & Checkpoints
+ - [ ] StyleAR based on [Lumina-mGPT 2.0](https://github.com/Alpha-VLLM/Lumina-mGPT-2.0)
+
 
 ## Citation
 
