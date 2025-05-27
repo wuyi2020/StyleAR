@@ -51,7 +51,7 @@ if __name__ == "__main__":
     parser.add_argument("--params_path", type=str)
     parser.add_argument("--style", type=str)
     parser.add_argument("--prompt", type=str)
-    parser.add_argument("--noise_strength", type=float, default=0.1)
+    parser.add_argument("--noise_strength", type=float, default=0.3)
     parser.add_argument("--seg", type=str, default=None)
     parser.add_argument("--save_path", type=str, default="output")
     args = parser.parse_args()
