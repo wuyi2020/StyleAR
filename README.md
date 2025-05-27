@@ -25,10 +25,10 @@ The code relies on the implementation of [Lumina-mGPT](https://github.com/Alpha-
 ### 1. Basic Setup
 
 ```
-# Create a new conda environment named 'lumina_mgpt' with Python 3.10
-conda create -n lumina_mgpt python=3.10 -y
-# Activate the 'lumina_mgpt' environment
-conda activate lumina_mgpt
+# Create a new conda environment named 'stylear' with Python 3.10
+conda create -n stylear python=3.10 -y
+# Activate the 'stylear' environment
+conda activate stylear
 # Install required packages from 'requirements.txt'
 pip install -r requirements.txt
 ```
@@ -46,10 +46,7 @@ wider functionality, including the support for flexible arrangement and processi
 The Lumina-mGPT implementation heavily relies on xllmx and requires xllmx to be installed as a python package (**so that `import xllmx` can be used anywhere in your machine, without the restriction of working directory**).
 The installation process is as follows:
 ```bash
-# bash
-# go to the root path of the project
-cd StyleAR
-# install as package
+# go to the root path of the project and install as package
 pip install -e .
 ```
 
