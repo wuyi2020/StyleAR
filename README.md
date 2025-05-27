@@ -84,7 +84,7 @@ StyleAR
 ```
 python inference.py --params_path "{stylear_params_path}" --style "{reference_style_image}" --prompt "{prompt}" --save_path "{save_path}"
 # samples
-python inference.py --params_path stylear_models --style ../test_images/doll.png --prompt "a lion" --save_path output
+python inference.py --params_path stylear_models --style ../test_images/doll.png --prompt "a ship" --save_path output
 ```
 
 ## 🔆 Demos
@@ -111,8 +111,8 @@ python inference.py --params_path stylear_models --style ../test_images/doll.png
 ## 📝 To-Do List
  - [x] Style-driven Text-to-Image Generation Inference Code & Checkpoints
  - [x] Technical Report
- - [ ] StyleAR Integration With Depth Control Inference Code & Checkpoints
- - [ ] StyleAR Integration With Segmentation Map Control Inference Code & Checkpoints
+ - [ ] StyleAR Integration with Depth Control Inference Code & Checkpoints
+ - [ ] StyleAR Integration with Segmentation Map Control Inference Code & Checkpoints
  - [ ] StyleAR Based on [Lumina-mGPT 2.0](https://github.com/Alpha-VLLM/Lumina-mGPT-2.0)
 
 
