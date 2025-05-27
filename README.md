@@ -110,6 +110,7 @@ python inference.py --params_path "{stylear_params_path}" --style "{reference_st
  - [x] Style-driven Text-to-Image Generation Inference Code & Checkpoints
  - [x] Technical Report
  - [ ] StyleAR Integration With Depth Control Inference Code & Checkpoints
+ - [ ] StyleAR Integration With Segmentation Map Control Inference Code & Checkpoints
  - [ ] StyleAR Based on [Lumina-mGPT 2.0](https://github.com/Alpha-VLLM/Lumina-mGPT-2.0)
 
 
