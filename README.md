@@ -85,6 +85,8 @@ StyleAR
 python inference.py --params_path "{stylear_params_path}" --style "{reference_style_image}" --prompt "{prompt}" --save_path "{save_path}"
 # samples
 python inference.py --params_path stylear_models --style ../test_images/doll.png --prompt "a ship" --save_path output
+python inference.py --params_path stylear_models --style ../test_images/airplane.png --prompt "a train" --save_path output
+python inference.py --params_path stylear_models --style ../test_images/owl.png --prompt "a dog" --save_path output
 ```
 
 ## 🔆 Demos
