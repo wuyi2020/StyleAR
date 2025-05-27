@@ -374,7 +374,10 @@ class FlexARInferenceSolver:
     ):
 
         special_tokens = "S* " * 15 + "S*"
-        q1 = f"Instant style Generation. Given image style is {special_tokens}. Please generate an same style image according to my instruction: "
+        if len(images) > 0:
+            q1 = f"Instant style Generation. Given image style is {special_tokens}. Please generate an image according to the provided image <|image|> and according to my instruction: "
+        else:
+            q1 = f"Instant style Generation. Given image style is {special_tokens}. Please generate an same style image according to my instruction: "
         qas = [[q1 + test_prompt, None]]
 
 
