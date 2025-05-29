@@ -125,7 +125,7 @@ If you find our work useful, please kindly cite as:
 @article{wu2025stylear,
   title={StyleAR: Customizing Multimodal Autoregressive Model for Style-Aligned Text-to-Image Generation},
   author={Wu, Yi and Zhu, Lingting and Qian, Shengju and Liu, Lei and Qiao, Wandi and Yu, Lequan and Li, Bin},
-  journal={arXiv preprint arXiv:2505.xxxxx},
+  journal={arXiv preprint arXiv:2505.19874},
   year={2025}
 }
 
