@@ -12,6 +12,7 @@ StyleAR is a framework that enables the multimodal autoregressive model to perfo
 </div>
 
 ## 🔥 Release
+- [2025/06/06] 🎉 We release the inference code and checkpoints of StyleAR integrate with depth control.
 - [2025/05/27] 🎉 We release the inference code and checkpoints.
 - [2025/05/27] 🎉 We release the [technical report](https://arxiv.org/abs/2505.19874).
 
@@ -19,6 +20,7 @@ StyleAR is a framework that enables the multimodal autoregressive model to perfo
 |Base Model| Task Type | Resolution | Checkpoint |
 |:---------|:---------|:--------|:--------|
 |[Lumina-mGPT](https://huggingface.co/Alpha-VLLM/Lumina-mGPT-7B-768)| Reference Style |768x768|[Hugging Face](https://huggingface.co/Ani2017/StyleAR)|
+|[Lumina-mGPT-Omni](https://huggingface.co/Alpha-VLLM/Lumina-mGPT-7B-768-Omni)| Reference Style with Depth Condition|768x768|[Hugging Face](https://huggingface.co/Ani2017/StyleAR/tree/main/Depth_condition)|
 
 ## ⚙️ Setup
 The code relies on the implementation of [Lumina-mGPT](https://github.com/Alpha-VLLM/Lumina-mGPT/tree/main), the setup procedure is the same.
@@ -87,6 +89,8 @@ python inference.py --params_path "{stylear_params_path}" --style "{reference_st
 python inference.py --params_path stylear_models --style ../test_images/doll.png --prompt "a ship" --noise_strength 0.3 --save_path output
 python inference.py --params_path stylear_models --style ../test_images/airplane.png --prompt "a train" --noise_strength 0.3 --save_path output
 python inference.py --params_path stylear_models --style ../test_images/owl.png --prompt "a dog" --noise_strength 0.1 --save_path output
+# samples with depth condition
+python inference_MultiCondition.py --params_path stylear_models/Depth_condition --style ../test_images/flower.png --prompt "a shoes" --noise_strength 0.1 --multi_condition ../test_images/shoes_depth.png
 ```
 
 ## 🔆 Demos
@@ -113,7 +117,7 @@ python inference.py --params_path stylear_models --style ../test_images/owl.png 
 ## 📝 To-Do List
  - [x] Style-driven Text-to-Image Generation Inference Code & Checkpoints
  - [x] Technical Report
- - [ ] StyleAR Integration with Depth Control Inference Code & Checkpoints
+ - [x] StyleAR Integration with Depth Control Inference Code & Checkpoints
  - [ ] StyleAR Integration with Segmentation Map Control Inference Code & Checkpoints
  - [ ] StyleAR Based on [Lumina-mGPT 2.0](https://github.com/Alpha-VLLM/Lumina-mGPT-2.0)
 
